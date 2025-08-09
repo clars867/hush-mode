@@ -15,4 +15,37 @@
 
       <div class="row toggle">
         <label class="switch">
-          <inpu
+          <input id="enabled" type="checkbox" />
+          <span class="slider"></span>
+        </label>
+        <span class="label">Enable</span>
+      </div>
+
+      <div class="group">
+        <div class="row">
+          <label>Voice boost <span id="voiceBoostVal">+6 dB</span></label>
+          <input id="voiceBoostDb" type="range" min="0" max="12" step="1" value="6" />
+        </div>
+        <div class="row">
+          <label>Music suppress <span id="musicCutVal">−12 dB</span></label>
+          <input id="musicCutDb" type="range" min="0" max="24" step="1" value="12" />
+        </div>
+        <div class="row">
+          <label>Bass cut (HPF) <span id="bassCutVal">120 Hz</span></label>
+          <input id="bassCutHz" type="range" min="20" max="240" step="5" value="120" />
+        </div>
+        <div class="row">
+          <label>Sparkle limit (LPF) <span id="sparkleVal">8000 Hz</span></label>
+          <input id="sparkleCutHz" type="range" min="2000" max="20000" step="250" value="8000" />
+        </div>
+      </div>
+
+      <footer>
+        <button id="reset">Reset</button>
+        <span class="status" id="status">Idle</span>
+      </footer>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
